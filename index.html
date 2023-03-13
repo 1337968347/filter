@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>滤波</title>
+    <style>
+      .boxItem {
+        display: inline-flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 20px;
+        width: fit-content;
+      }
+      .boxTitle {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 10px;
+        font-size: 18px;
+      }
+    </style>
+    <script src="./filter.js"></script>
+  </head>
+  <body>
+    <div class="boxItem">
+      <div class="boxTitle">原始图像</div>
+      <canvas id="origin"></canvas>
+    </div>
+    <script src="./origin.js"></script>
+
+    <div class="boxItem">
+      <div class="boxTitle">box Filter（均值滤波器）</div>
+      <canvas id="boxFilter"></canvas>
+    </div>
+    <script src="./boxfilter.js"></script>
+
+    <div class="boxItem">
+      <div class="boxTitle">Gaussian Filter（高斯滤波器）</div>
+      <canvas id="gaussianFilter"></canvas>
+    </div>
+    <script src="./gaussian.js"></script>
+
+    <div class="boxItem">
+      <div class="boxTitle">Sobel（一阶微分算子）</div>
+      <canvas id="sobel"></canvas>
+    </div>
+    <script src="./sobel.js"></script>
+
+    <div class="boxItem">
+      <div class="boxTitle">laplacian(拉普拉斯算子 锐化)</div>
+      <canvas id="laplacian"></canvas>
+    </div>
+    <script src="./laplacian.js"></script>
+
+
+    <div class="boxItem">
+        <div class="boxTitle">Dog(difference of gaussian. TODO)</div>
+        <canvas id="laplacian"></canvas>
+      </div>
+  </body>
+</html>
